@@ -3,7 +3,7 @@ const Footer = () => {
     <>
       <div className="divFooter">
         <h5>¡Sumérgete en este mundo perruno y encuentra la compañía perfecta! 🐾✨</h5>
-        <p>Por: Yerko Browton</p>
+        <p>Por: rafael poblete lopez</p>
       </div>
     </>
   );
