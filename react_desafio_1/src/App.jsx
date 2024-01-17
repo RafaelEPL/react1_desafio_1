@@ -1,68 +1,54 @@
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+import MyCard from "./Components/MyCards";
+import img1 from "./assets/Larry.jpg";
+import img2 from "./assets/Rocke.jpg";
+import img3 from "./assets/Lola.jpg";
+import img4 from "./assets/Jerry.jpg";
+import CardGroup from "react-bootstrap/CardGroup";
 
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-
-const App = () => {
-const title = 'Adopta un Animal'
-  
-  const cardData = [
-    {
-      titulo: 'Canela',
-      imagen: './src/assets/canela.jpg',
-      description: 'La perrita mas bonita',
-      key: '1',
-      texto: 'Mini-Greyhound',
-      color: 'secondary',
-    },
-    {
-      titulo: 'Minina',
-      imagen: './src/assets/gata.jpg',
-      description: 'La gata mas odiosa',
-      key: '2',
-      texto: 'Sacame a pasear',
-      color: 'danger',
-      
-    },
-    {
-      titulo: 'Choriflai',
-      imagen: './src/assets/perro2.jpg',
-      description: 'El perrito inventado',
-      key: '3',
-      texto: 'Kiltro',
-      color: 'success',
-    },
-    {
-      titulo: 'Chocolito',
-      imagen: './src/assets/perro3.jpg',
-      description: 'El perrito come-helados',
-      key: '4',
-      texto: 'Pug',
-      color: 'warning',
-    },
-  ]
-
+function App() {
   return (
-    <div>
-      <Header title={title} />
-      <div className='flexcaja'>
-      {cardData.map((card) => (
-        
+    <>
+      <Header title="¡Adopta un perrito! 🐶" />
+      <CardGroup className="CardGroup">
         <MyCard 
-          titulo={card.titulo}
-          imagen={card.imagen}
-          description={card.description}
-          key={card.key}
-          texto={card.texto}
-          color={card.color}
+        img={img1} 
+        name="Larry" 
+        desc="Larry, con su pelaje suave y ojos llenos de curiosidad, es un verdadero explorador. Su pelaje de tonalidades cálidas resalta su naturaleza amigable."
+        color="warning"
+        texto="Ver más" 
         />
-        
-      ))}
-      </div>
+
+        <MyCard 
+        img={img2} 
+        name="Rocke" 
+        desc="Rocke, un impresionante Rhodesian Ridgeback, irradia nobleza y fuerza. Su pelaje corto y lustroso resalta la musculatura poderosa de esta raza."
+        color="success"
+        texto="Ver más" 
+        />
+
+        <MyCard 
+        img={img3} 
+        name="Lola"
+        desc="Lola, con su pelaje esponjoso y expresivos ojos, es una adorable compañera que irradia ternura. Su mezcla de colores y las manchas en su hocico añaden un toque único a su belleza canina."
+        color="primary"
+        texto="Ver más" 
+        />
+
+        <MyCard 
+        img={img4} 
+        name="Jerry"
+        desc="Jerry, con su pelaje suave y expresión vivaz, es un auténtico aventurero. Sus orejas levantadas y ojos brillantes revelan su naturaleza curiosa y llena de energía."
+        color="info"
+        texto="Ver más" 
+        />
+      </CardGroup>
       <Footer />
-    </div>
-  ); 
-};
+    </>
+  );
+}
 
 export default App;
