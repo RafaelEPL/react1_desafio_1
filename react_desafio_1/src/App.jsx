@@ -1,9 +1,8 @@
-import './App.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from "./components/Header";
-import Footer from './components/Footer'
-import MyCard from './components/MyCard'
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const App = () => {
 const title = 'Adopta un Animal'
